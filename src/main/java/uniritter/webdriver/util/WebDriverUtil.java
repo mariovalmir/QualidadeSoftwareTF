@@ -1,4 +1,4 @@
-package uniritter.webdriver;
+package uniritter.webdriver.util;
 
 import java.util.concurrent.TimeUnit;
 

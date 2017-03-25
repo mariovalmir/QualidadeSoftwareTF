@@ -1,6 +1,6 @@
 package uniritter.webdriver.po;
 
-import uniritter.webdriver.WebDriverUtil;
+import uniritter.webdriver.util.WebDriverUtil;
 
 public abstract class BasicPage {
 
