@@ -1,5 +1,4 @@
 language: java
-env:
-  - JDK=oraclejdk8
-  - JDK=openjdk8
+jdk:
+  - oraclejdk8
 script: mvn test
