@@ -13,7 +13,7 @@ import uniritter.webdriver.po.CatalogPage;
 import uniritter.webdriver.po.LoginPage;
 import uniritter.webdriver.po.SendEmailPage;
 
-public class ExpressoSearch {
+public class ExpressoSearchTest {
 
 	@Before
 	public void setUp() throws Exception {
