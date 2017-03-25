@@ -17,7 +17,7 @@ public class ExpressoSearchTest {
 
 	@Before
 	public void setUp() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "libs/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "libs/chromedriver");
 	}
 
 	@Test
