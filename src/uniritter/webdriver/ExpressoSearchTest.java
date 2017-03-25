@@ -40,7 +40,7 @@ public class ExpressoSearchTest {
 		sep.getCampoAssunto().sendKeys("Assunto Teste");
 		sep.getBotaoEnviar().click();
 		
-		assertEquals("Você deve fornecer pelo menos um endereço de destinatário de email.",
+		assertEquals("VocÃª deve fornecer pelo menos um endereÃ§o de destinatÃ¡rio de email.",
 				sep.getWebDriver().findElementById("em_div_write_msg").getText());
 	}
 	
@@ -49,7 +49,7 @@ public class ExpressoSearchTest {
 		logaSeNaoEstaLogado();
 
 		CatalogPage cp = new CatalogPage();
-		cp.getCampoPesquisaCatalogo().sendKeys("Mário Valmir");
+		cp.getCampoPesquisaCatalogo().sendKeys("Mï¿½rio Valmir");
 		cp.getBotaoPesquisa().click();
 		cp.getTabelaCatalogo().click();
 
@@ -64,11 +64,11 @@ public class ExpressoSearchTest {
 
 		cp.getWebDriver().doubleClick(cp.getTabelaNovoEvento());
 		cp.getTituloEvento().sendKeys("Titulo Teste");
-		cp.getDescricaoEvento().sendKeys("Descrição Teste");
-		cp.getLocalEvento().sendKeys("Locação Teste");
+		cp.getDescricaoEvento().sendKeys("DescriÃ§Ã£o Teste");
+		cp.getLocalEvento().sendKeys("LocaÃ§Ã£o Teste");
 		cp.getBotaSalvar().click();
 
-		assertEquals("08:00 - 08:30 - Titulo Teste - Descrição Teste", cp.getEvento().getText());
+		assertEquals("08:00 - 08:30 - Titulo Teste - DescriÃ§Ã£o Teste", cp.getEvento().getText());
 		
 		cp.getWebDriver().doubleClick(cp.getEvento());
 		cp.getBotaoRemover().click();
