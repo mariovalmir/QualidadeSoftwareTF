@@ -79,7 +79,7 @@ public class ExpressoSearchTest {
 	}
 	
 	@AfterClass
-	public void tearDown(){
+	public static void tearDown(){
 		LoginPage lp = new LoginPage();
 		lp.getWebDriver().close();
 	}
