@@ -1,0 +1,9 @@
+Devido a escolha da ferramanta de teste ser o email profissional da empresa, foi escolhido os casos de teste
+que abrangenssem a maior parte da ferramenta sem realizar nenhuma ação prejudicial ao acesso ao conteúdo.
+
+Casos de teste:
+
+Login do email;
+Validação de destinatário para envio de email;
+Busca de contatos;
+Criação e remoção de eventos;

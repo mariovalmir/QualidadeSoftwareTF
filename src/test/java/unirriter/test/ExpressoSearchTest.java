@@ -17,14 +17,13 @@ public class ExpressoSearchTest {
 
 	@Before
 	public void setUp() throws Exception {
-//		System.setProperty("webdriver.chrome.driver", "libs/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "libs/chromedriver.exe");
+		logaSeNaoEstaLogado();
 	}
 
 	@Test
 	public void testRealizaLoginSucesso() throws Exception {
-		logaSeNaoEstaLogado();
 		LoginPage lp = new LoginPage();
-		logaSeNaoEstaLogado();
 
 		String nomeUsuario = lp.getMensagemLogin().getText();
 		assertTrue(nomeUsuario.contains("Mario Valmir Gomes Pereira Junior"));
@@ -32,8 +31,6 @@ public class ExpressoSearchTest {
 
 	@Test
 	public void testEnviaEmailSemDestinatario() throws Exception {
-		logaSeNaoEstaLogado();
-		
 		SendEmailPage sep = new SendEmailPage();
 		
 		sep.getNovaMensagem().click();
@@ -46,10 +43,9 @@ public class ExpressoSearchTest {
 	
 	@Test
 	public void testConsultaCatalogoEndereco() throws Exception {
-		logaSeNaoEstaLogado();
-
 		CatalogPage cp = new CatalogPage();
-		cp.getCampoPesquisaCatalogo().sendKeys("M�rio Valmir");
+		
+		cp.getCampoPesquisaCatalogo().sendKeys("Mario Valmir");
 		cp.getBotaoPesquisa().click();
 		cp.getTabelaCatalogo().click();
 
@@ -57,11 +53,10 @@ public class ExpressoSearchTest {
 	}
 	
 	@Test
-	public void testCriaEventoCalendarioEmRascunho() throws Exception {
-		logaSeNaoEstaLogado();
+	public void testCriaEDeletaEventoCalendarioEmRascunho() throws Exception {
 		CalendarPage cp = new CalendarPage();
+		
 		cp.getBotaoCalendario().click();
-
 		cp.getWebDriver().doubleClick(cp.getTabelaNovoEvento());
 		cp.getTituloEvento().sendKeys("Titulo Teste");
 		cp.getDescricaoEvento().sendKeys("Descrição Teste");

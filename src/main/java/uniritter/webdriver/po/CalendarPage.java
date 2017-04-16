@@ -6,7 +6,8 @@ import org.openqa.selenium.WebElement;
 public class CalendarPage extends BasicPage {
 
 	public WebElement getBotaoCalendario() {
-		return getWebDriver().findElementById("calendarid");
+		getWebDriver().fluentWait(By.cssSelector("span.icones-barra.calendar-icone"));
+		return getWebDriver().findElementByCssSelector("span.icones-barra.calendar-icone");
 	}
 	
 	public WebElement getTabelaNovoEvento() {
@@ -33,8 +34,8 @@ public class CalendarPage extends BasicPage {
 	}
 	
 	public WebElement getEvento() {
-		getWebDriver().fluentWait(By.className("dhx_cal_event_clear"));
-		return getWebDriver().findElementByClassName("dhx_cal_event_clear");
+		getWebDriver().fluentWait(By.xpath("//div[contains(@title,'Descrição Teste')]"));
+		return getWebDriver().findElementByXpath("//div[contains(@title,'Descrição Teste')]");
 	}
 	
 	public WebElement getBotaoRemover() {
